@@ -1,0 +1,17 @@
+﻿.css-border{
+    border: 1.2px solid #0094ff;
+}
+.css-opacity{
+    opacity: 0.8;
+}
+
+.css-display{
+    display: none;
+}
+.selected-bg {
+    background-color: #ffffff !important;
+}
+
+.selected-border{
+    border: 2px solid #0026ff!important;
+}

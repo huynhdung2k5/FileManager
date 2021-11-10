@@ -1,0 +1,170 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section header{
+	<link rel="stylesheet" href="~/css/site.css" />
+	<link href="~/css/sidebar.css" rel="stylesheet" />
+	<link href="~/css/Animate.css" rel="stylesheet" />
+}
+
+<div class="text-center">
+    @*<h1 class="display-4">File Manager</h1>
+    <button class="js-btnDEMO btn btn-primary" data-toggle="modal" data-target="js-modal">DEMO BUTTON</button>*@
+</div>
+
+<div class="card">
+	<div class="card-header">
+		<ul>
+			<li>
+				<button class="css-btn btn btn-md btn-light border border-secondary" id="btnsidebar">
+					<i class="fas fa-bars"></i>
+					<p>Thu gọn</p>
+				</button>
+				<button class="css-btn btn btn-md btn-light border border-secondary" id="">
+					<i class="fas fa-folder-plus"></i>
+					<p>Tạo mới</p>
+				</button>
+				<button class="css-btn btn btn-md btn-light border-secondary css-display">
+					<i class="fas fa-eye"></i>
+					<p>Xem</p>
+				</button>
+				<button class="css-btn btn btn-md btn-light border-secondary css-display">
+					<i class="fas fa-download"></i>
+					<p>Tải về</p>
+				</button>
+				<button class="css-btn btn btn-md btn-light border-secondary css-display">
+					<i class="fas fa-edit"></i>
+					<p>Sửa</p>
+				</button>
+				<button class="css-btn btn btn-md btn-light border-secondary css-display">
+					<i class="fas fa-copy"></i>
+					<p>Copy</p>
+				</button>
+				<button class="css-btn btn btn-md btn-light border-secondary css-display">
+					<i class="fas fa-file-export"></i>
+					<p>Di chuyển</p>
+				</button>
+				<button class="css-btn btn btn-md btn-light border-secondary css-display">
+					<i class="fas fa-info-circle"></i>
+					<p>Đổi tên</p>
+				</button>
+				<button class="css-btn btn btn-md btn-light border-secondary css-display">
+					<i class="fas fa-trash-alt"></i>
+					<p>Xóa</p>
+				</button>
+			</li>
+		</ul>
+		<form id="css-form" enctype="multipart/form-data" asp-action="FileUpLoad">
+
+			<input type="file" name="myfile" accept="image/*" id="fileUpload" class="custom-file-input" />
+			<label class="custom-file-label" for="fileUpload"></label>
+			<button class="btn btn-md btn-light js-btn-Upload  border-secondary">
+				<i class="fas fa-upload"></i>
+				Tải lên
+			</button>
+		</form>
+
+		<!--Tìm Kiếm-->
+		<div class="input-group rounded css-search">
+			<input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+					aria-describedby="search-addon" />
+			<button class="btn btn-light">
+				<i class="fas fa-cog"></i>
+			</button>
+		</div>
+	</div>
+	<div class="card-body">
+		<div class="js-slide">
+			<nav id="sidebar">
+				<ul class="lisst-unstyled components">
+					<li class="border-li">
+						<a href="#">
+							<i class="fas fa-folder text-primary"></i>
+							file
+						</a>
+						<i href="#submenu1" data-toggle="collapse" aria-expanded="false" class="fas fa-caret-down" id="icon"></i>
+						<ul class="collapse lisst-unstyled" id="submenu1">
+							<li class="li-item">
+								<a href="#">file1</a>
+							</li>
+							<li class="li-item">
+								<a href="#">file2</a>
+							</li>
+							<li class="li-item">
+								<a href="#">file3</a>
+							</li>
+						</ul>
+					</li>
+					<li class="border-li">
+						<a href="#">
+							<i class="fas fa-folder text-primary"></i>
+							file
+						</a>
+						<i href="#submenu2" data-toggle="collapse" aria-expanded="false" class="fas fa-caret-down"></i>
+
+						<ul class="collapse lisst-unstyled" id="submenu2">
+							<li class="li-item">
+								<i class="fas fa-folder text-primary"></i>
+								<a href="#">file1</a>
+							</li>
+							<li class="li-item">
+								<i class="fas fa-folder text-primary"></i>
+								<a href="#">file2</a>
+							</li>
+							<li class="li-item">
+								<i class="fas fa-folder text-primary"></i>
+								<a href="#">file3</a>
+							</li>
+						</ul>
+					</li>
+					<li class="border-li">
+						<a href="#">
+							<i class="fas fa-folder text-primary"></i>
+							file
+						</a>
+						<i href="#submenu3" data-toggle="collapse" aria-expanded="false" class="fas fa-caret-down"></i>
+
+						<ul class="collapse lisst-unstyled" id="submenu3">
+							<li class="li-item">
+								<a href="#">file1</a>
+							</li>
+							<li class="li-item">
+								<a href="#">file2</a>
+							</li>
+							<li class="li-item">
+								<a href="#">file3</a>
+							</li>
+						</ul>
+					</li>
+					<li class="border-li">
+						<a href="#">
+							<i class="fas fa-folder text-primary"></i>
+							file
+						</a>
+						<i href="#submenu4" data-toggle="collapse" aria-expanded="false" class="fas fa-caret-down"></i>
+
+						<ul class="collapse lisst-unstyled" id="submenu4">
+							<li class="li-item">
+								<a href="#">file1</a>
+							</li>
+							<li class="li-item">
+								<a href="#">file2</a>
+							</li>
+							<li class="li-item">
+								<a href="#">file3</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="css-content">
+			<img class="js-img" width="100" src="~/MyImages/hinhmau.png"/>
+
+		</div>
+	</div>
+</div>
+@section Scripts{
+	<script src="~/js/site.js"></script>
+}
