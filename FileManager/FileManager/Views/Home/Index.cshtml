@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+	ViewData["Title"] = "Home Page";
 }
 
 @section header{
@@ -7,11 +7,6 @@
 	<link href="~/css/sidebar.css" rel="stylesheet" />
 	<link href="~/css/Animate.css" rel="stylesheet" />
 }
-
-<div class="text-center">
-    @*<h1 class="display-4">File Manager</h1>
-    <button class="js-btnDEMO btn btn-primary" data-toggle="modal" data-target="js-modal">DEMO BUTTON</button>*@
-</div>
 
 <div class="card">
 	<div class="card-header">
@@ -53,22 +48,30 @@
 					<i class="fas fa-trash-alt"></i>
 					<p>Xóa</p>
 				</button>
+				<div class="form-inline css-display" id="css-form">
+					<input type="text" name="picture" id="picture" class="form-control" style="display: none;" />
+					<input type="file" name="fileUpload" accept="image/*" id="fileUpload" style="display: none;" />
+					<button type="button" class=" css-btn btn btn-md btn-light border-secondary" id="btnUpload">
+						<i class="fas fa-upload"></i>
+						Tải lên
+					</button>
+				</div>
 			</li>
 		</ul>
-		<form id="css-form" enctype="multipart/form-data" asp-action="FileUpLoad">
+		@*<form id="css-form" enctype="multipart/form-data" asp-action="FileUpLoad">
 
-			<input type="file" name="myfile" accept="image/*" id="fileUpload" class="custom-file-input" />
-			<label class="custom-file-label" for="fileUpload"></label>
-			<button class="btn btn-md btn-light js-btn-Upload  border-secondary">
-				<i class="fas fa-upload"></i>
-				Tải lên
-			</button>
-		</form>
+				<input type="file" name="myfile" accept="image/*" id="fileUpload" class="custom-file-input" hidden />
+				<label class="custom-file-label" for="fileUpload" lang="vi"></label>
+				<button class="btn btn-md btn-light js-btn-Upload  border-secondary">
+					<i class="fas fa-upload"></i>
+					Tải lên
+				</button>
+			</form>*@
 
 		<!--Tìm Kiếm-->
 		<div class="input-group rounded css-search">
 			<input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-					aria-describedby="search-addon" />
+				   aria-describedby="search-addon" />
 			<button class="btn btn-light">
 				<i class="fas fa-cog"></i>
 			</button>
@@ -160,11 +163,11 @@
 			</nav>
 		</div>
 		<div class="css-content">
-			<img class="js-img" width="100" src="~/MyImages/hinhmau.png"/>
-
+			<img class="js-img" width="250" id="pictureUpload" />
 		</div>
 	</div>
 </div>
 @section Scripts{
 	<script src="~/js/site.js"></script>
+	<script src="~/js/UpImage.js"></script>
 }

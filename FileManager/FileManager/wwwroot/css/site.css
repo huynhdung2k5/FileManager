@@ -131,8 +131,9 @@ body {
 }
 
 #css-form {
-    right: 320px;
-    position: absolute;
+	display: inline-block;
+	position: fixed;
+	margin-left: 6px;
 }
 
 #fileUpload, .custom-file-label{

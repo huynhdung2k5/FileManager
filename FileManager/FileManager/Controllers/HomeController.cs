@@ -38,20 +38,20 @@ namespace FileManager.Controllers
         }
 
         [HttpPost]
-        public IActionResult FileUpLoad(IFormFile myfile)
+        public string FileUpLoad(IFormFile file)
         {
-            if (myfile != null)
+            if (file != null)
             {
                 //chỉ đường dẫn
-                string fullPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "MyImages", myfile.FileName);
+                string fullPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "MyImages", file.FileName);
 
                 //copy file vô thư mục 
-                using (var file = new FileStream(fullPath, FileMode.Create))
+                using (var files = new FileStream(fullPath, FileMode.Create))
                 {
-                    myfile.CopyTo(file);
+					file.CopyTo(files);
                 }
             }
-            return View("Index");
+            return "/MyImages/" + file.FileName;
         }
     }
 }
