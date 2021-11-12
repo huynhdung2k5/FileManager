@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k29sQd8kRhKdDKb1BklCWtMpisw0NlGSdDAgoEg+EXhLgtVmchBYf9OK5KZdIj1TSL5H7EYDwBK9jyklG86E2Q==",
+  "dgSpecHash": "JVM//1BzNweB8Zwniwbci6c82cmgqyws70Inr07D4X8PZfYBKm/3gqZlWubvuvBbMyBEaAqO9W/el+IhFB9UNQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\YASOU\\source\\repos\\FileManager\\FileManager\\FileManager.csproj",
+  "projectFilePath": "E:\\GitHub\\FileManager\\FileManager\\FileManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\YASOU\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\YASOU\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

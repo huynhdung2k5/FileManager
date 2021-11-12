@@ -58,8 +58,10 @@ ul ul a {
 }
 
 .border-li {
-    border-left: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
     position: relative;
+}
+
+.border-li > a {
+	border: 1.5px solid #ccc;
 }
 

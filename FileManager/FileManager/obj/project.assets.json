@@ -6238,11 +6238,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\YASOU\\source\\repos\\FileManager\\FileManager\\FileManager.csproj",
+      "projectUniqueName": "E:\\GitHub\\FileManager\\FileManager\\FileManager.csproj",
       "projectName": "FileManager",
-      "projectPath": "C:\\Users\\YASOU\\source\\repos\\FileManager\\FileManager\\FileManager.csproj",
+      "projectPath": "E:\\GitHub\\FileManager\\FileManager\\FileManager.csproj",
       "packagesPath": "C:\\Users\\YASOU\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\YASOU\\source\\repos\\FileManager\\FileManager\\obj\\",
+      "outputPath": "E:\\GitHub\\FileManager\\FileManager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
