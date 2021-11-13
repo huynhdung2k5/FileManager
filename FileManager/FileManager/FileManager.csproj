@@ -6,7 +6,8 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\fonts\" />
-    <Folder Include="wwwroot\MyImages\" />
+    <Folder Include="wwwroot\MyImages\folder1\" />
+    <Folder Include="wwwroot\MyImages\folder2\" />
   </ItemGroup>
 
   <ItemGroup>

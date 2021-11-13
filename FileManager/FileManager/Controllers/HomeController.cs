@@ -1,4 +1,5 @@
 ﻿using FileManager.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -13,11 +14,12 @@ namespace FileManager.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private IWebHostEnvironment host;
+
+        public HomeController(IWebHostEnvironment _host)
         {
-            _logger = logger;
+            host = _host;
         }
 
         [HttpGet]
@@ -53,5 +55,18 @@ namespace FileManager.Controllers
             }
             return "/MyImages/" + file.FileName;
         }
+
+        public object GetAllFile(string path="/MyImages")
+		{
+			string wwwPath = host.WebRootPath;
+			var files = Directory.GetFiles(wwwPath + path);
+			var dirs = Directory.GetDirectories(wwwPath + path);
+			var filePaths = files.Select(f => f.Replace(wwwPath, "").Replace("\\", "/"));
+			var dirPaths = dirs.Select(f => f.Replace(wwwPath, "").Replace("\\", "/"));
+			return new {
+				dirs = dirPaths,
+				files = filePaths
+			};
+		}
     }
 }
