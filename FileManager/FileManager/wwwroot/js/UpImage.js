@@ -1,4 +1,6 @@
-﻿$(function () {
+﻿
+
+$(function () {
 	$('#btnUpload').click(function () {
 		$('#fileUpload').trigger('click');
 	});
@@ -27,4 +29,14 @@
 			});
 		}
 	});
+
+	//hien thi list hinh anh
+	$.ajax({
+		type: 'GET',
+		url: '/Home/GetAllFile',
+		data: arr,
+		success: function (res) {
+
+		}
+	})
 });
