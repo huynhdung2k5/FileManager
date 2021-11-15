@@ -11,12 +11,7 @@ $('#btnsidebar').on('click', function () {
     
 });
 
-$('.js-img').on('click', ev => {
-    ev.preventDefault();
-    $('.js-img').toggleClass('css-border');
-    $('.js-img').toggleClass('css-opacity');
-    $('.css-btn').toggleClass('css-display');
-});
+
 
 $('.border-li>a').on('click',function() {
 
