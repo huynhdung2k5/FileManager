@@ -34,9 +34,17 @@ $(function () {
 	$.ajax({
 		type: 'GET',
 		url: '/Home/GetAllFile',
-		data: arr,
+		data: 'JSON',
 		success: function (res) {
-
+			res.files.map(function (val) {
+				return $('.js-content').append('<img class="js-img" height="180" width="200" id="pictureUpload" src="' + val + '" />');
+			})
 		}
-	})
+	});
+
+	$('#pictureUpload').click(function() {
+		$(this).toggleClass('css-border');
+		$(this).toggleClass('css-opacity');
+		$('.css-btn').toggleClass('css-display');
+	});
 });
