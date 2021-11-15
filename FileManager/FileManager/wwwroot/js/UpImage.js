@@ -20,7 +20,6 @@ $(function () {
 				processData: false,
 				data: formData,
 				success: function (urlImage) {
-					$('#pictureUpload').attr('src', urlImage);
 					$('#picture').val(urlImage);
 				},
 				error: function (err) {
@@ -36,15 +35,21 @@ $(function () {
 		url: '/Home/GetAllFile',
 		data: 'JSON',
 		success: function (res) {
-			res.files.map(function (val) {
-				return $('.js-content').append('<img class="js-img" height="180" width="200" id="pictureUpload" src="' + val + '" />');
-			})
+			res.files.forEach(function (val,index) {
+				$('.js-content').append('<img class="js-img" height="180" width="200" src="' + val + '" />');
+			});
+
+			$(".js-img").click(function () {
+				if (this != $('.js-img.css-border.css-opacity').get(0)) {
+					$('.js-img.css-border.css-opacity').removeClass('css-border css-opacity');
+					$('.css-btn.css-display').removeClass('css-display');
+				}
+				$(this).toggleClass('css-border css-opacity');
+				/*$(this).toggleClass('css-opacity');*/
+				$('.css-btn').toggleClass('css-display');
+			});
 		}
 	});
 
-	$('#pictureUpload').click(function() {
-		$(this).toggleClass('css-border');
-		$(this).toggleClass('css-opacity');
-		$('.css-btn').toggleClass('css-display');
-	});
+
 });
