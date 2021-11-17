@@ -42,11 +42,15 @@ $(function () {
 			$(".js-img").click(function () {
 				if (this != $('.js-img.css-border.css-opacity').get(0)) {
 					$('.js-img.css-border.css-opacity').removeClass('css-border css-opacity');
+
+				}
+				$(this).toggleClass('css-opacity css-border');
+
+				if ($('.css-btn').get(0) != $('.css-btn.css-display').get(0)) {
 					$('.css-btn.css-display').removeClass('css-display');
 				}
-				$(this).toggleClass('css-border css-opacity');
-				/*$(this).toggleClass('css-opacity');*/
 				$('.css-btn').toggleClass('css-display');
+
 			});
 		}
 	});
