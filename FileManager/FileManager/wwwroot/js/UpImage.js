@@ -42,14 +42,16 @@ $(function () {
 			$(".js-img").click(function () {
 				if (this != $('.js-img.css-border.css-opacity').get(0)) {
 					$('.js-img.css-border.css-opacity').removeClass('css-border css-opacity');
-
+					$('#btnNew.css-display').removeClass('css-display');
+					$('#btnUpload.css-display').removeClass('css-display');
 				}
-				$(this).toggleClass('css-opacity css-border');
-
-				if ($('.css-btn').get(0) != $('.css-btn.css-display').get(0)) {
-					$('.css-btn.css-display').removeClass('css-display');
-				}
-				$('.css-btn').toggleClass('css-display');
+				$(this).toggleClass('css-border css-opacity');
+				$('#btnNew').toggleClass('css-display');
+				$('#btnUpload').toggleClass('css-display');
+				//hien thi button chuc nang của image
+				if ($(this).hasClass('css-border css-opacity')) {
+					$('.css-btn').removeClass('css-display');
+				} else $('.css-btn').toggleClass('css-display');
 
 			});
 		}
